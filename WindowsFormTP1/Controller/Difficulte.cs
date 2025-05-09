@@ -12,6 +12,7 @@ namespace WindowsFormTP1.Controller
 {
     internal class Difficulte
     {
+        #region recupereDifficulte
         public DataTable getListeDifficulte()
         {
             DataTable dt = new DataTable();
@@ -39,5 +40,6 @@ namespace WindowsFormTP1.Controller
             conn.MySqlCo = null;
             return dt;
         }
+        #endregion
     }
 }

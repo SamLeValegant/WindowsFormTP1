@@ -35,6 +35,10 @@ namespace WindowsFormTP1.Vue
             comboRechercheDiff.DataSource = dtListeDiff.getListeDifficulte();
             comboRechercheDiff.DisplayMember = "LABELDIFFICULTE"; //nom de l’alias SQL ou nom de la colonne
             comboRechercheDiff.ValueMember = "IDDIFFICULTE";  //nom de l’alias SQL ou nom de la colonne
+            cbBoxDiffAjoutModif.DataSource = dtListeDiff.getListeDifficulte();
+            cbBoxDiffAjoutModif.DisplayMember = "LABELDIFFICULTE";
+            cbBoxDiffAjoutModif.ValueMember = "IDDIFFICULTE";  
+
 
         }
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -54,6 +58,16 @@ namespace WindowsFormTP1.Vue
             QuestionBDD dt_listeQuestion = new QuestionBDD();
             DataView dv = new DataView(dt_listeQuestion.GetListeQuestionRecherche(comboRechercheDiff.SelectedIndex, txtRecherchemot.Text, false));
             dgvQuestions.DataSource = dv;
+        }
+
+        private void btnAjoutQuestion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModifierQuestion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
